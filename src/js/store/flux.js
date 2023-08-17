@@ -21,28 +21,24 @@ const getState = ({ getStore, setStore, getActions }) => {
 				}
 			},
 
-			guardarContacto: async function (nombre,mail,direccion,telefono) {
+			guardarContacto: async function(nombre, mail, direccion, telefono) {
 				try {
-
-					let contacto={
-						full_name:nombre,
-						email:mail,
-						address:direccion,
+					let contacto = {
+						full_name: nombre,
+						email: mail,
+						address: direccion,
 						phone: telefono,
-						agenda_slug:"marcia1"
-					}
-					let response = await fetch("https://playground.4geeks.com/apis/fake/contact/agenda/marcia1");
-					// 		let data = await response.json();
-					// 		console.log(data);
-
-					// 		setStore({ contacts: data });
-					// 		// setStore({propiedad:el valor que quieren actualizar})
+						agenda_slug: "marcia1"
+					};
+					let response = await fetch("https://playground.4geeks.com/apis/fake/contact/", {
+						method: "POST",
+						headers: { "Content-Type": "application/json" },
+						body: JSON.stringify(contacto)
+					});
 				} catch (error) {
 					console.log(error);
 				}
 			}
-
-			// aca es un fech para agragar contacto
 		}
 	};
 };
