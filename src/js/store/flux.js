@@ -35,6 +35,21 @@ const getState = ({ getStore, setStore, getActions }) => {
 						headers: { "Content-Type": "application/json" },
 						body: JSON.stringify(contacto)
 					});
+					let data = await response.json();
+					console.log(data);
+				} catch (error) {
+					console.log(error);
+				}
+			},
+			eliminarContactos: async function(id) {
+				try {
+					let response = await fetch("https://playground.4geeks.com/apis/fake/contact/" + id, {
+						method: "DELETE",
+						headers: { "Content-Type": "application/json" }
+					});
+
+					let data = await response.json();
+					getActions().obtenerInfo();
 				} catch (error) {
 					console.log(error);
 				}

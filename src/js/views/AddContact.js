@@ -25,7 +25,9 @@ export const AddContact = () => {
 							className="form-control"
 							placeholder="Full Name"
 							value={nombre}
-							onChange={e => setNombre(e.target.value)}
+							onChange={function(e) {
+								setNombre(e.target.value);
+							}}
 						/>
 					</div>
 					<div className="form-group">
@@ -35,7 +37,9 @@ export const AddContact = () => {
 							className="form-control"
 							placeholder="Enter email"
 							value={mail}
-							onChange={e => setMail(e.target.value)}
+							onChange={function(e) {
+								setMail(e.target.value);
+							}}
 						/>
 					</div>
 					<div className="form-group">
@@ -45,7 +49,9 @@ export const AddContact = () => {
 							className="form-control"
 							placeholder="Enter phone"
 							value={telefono}
-							onChange={e => setTelefono(e.target.value)}
+							onChange={function(e) {
+								setTelefono(e.target.value);
+							}}
 						/>
 					</div>
 					<div className="form-group">
@@ -55,7 +61,9 @@ export const AddContact = () => {
 							className="form-control"
 							placeholder="Enter address"
 							value={direccion}
-							onChange={e => setDireccion(e.target.value)}
+							onChange={function(e) {
+								setDireccion(e.target.value);
+							}}
 						/>
 					</div>
 					<button type="button" className="btn btn-primary form-control" onClick={agragarContacto}>
