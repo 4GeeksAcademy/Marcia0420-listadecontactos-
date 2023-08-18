@@ -26,6 +26,18 @@ export const Modal = props => {
 								<span aria-hidden="true">&times;</span>
 							</button>
 						) : (
+							//  PUT: /apis/fake/contact/{contact_id}
+
+							//  Request (application/json)
+
+							// 	 body:
+							// 	 {
+							// 		 "full_name": "Dave Bradley",
+							// 		 "email": "dave@gmail.com",
+							// 		 "agenda_slug": "my_super_agenda",
+							// 		 "address":"47568 NW 34ST, 33434 FL, USA",
+							// 		 "phone":"7864445566"
+							// 	 }
 							""
 						)}
 					</div>
